@@ -1,0 +1,30 @@
+{
+  "name": "taskflow-api",
+  "version": "1.0.0",
+  "description": "TaskFlow - Görev ve Proje Yönetim Sistemi REST API",
+  "type": "module",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node scripts/seed.js",
+    "test": "node --test \"tests/**/*.test.js\"",
+    "test:postman": "npx --yes newman@6 run postman/TaskFlow.postman_collection.json -e postman/TaskFlow.local.postman_environment.json"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "rest-api",
+    "task-management"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "supertest": "^7.1.0"
+  }
+}
